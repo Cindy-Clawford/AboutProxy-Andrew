@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
 const axios = require('axios')
+require('newrelic');
 
 const app = express();
 const port = 4004;
