@@ -41,6 +41,7 @@ app.get('/api/low-days/:id', (req, res) => {
 })
 
 app.get('/api/hotel/:hotelId', (req, res) => {
+  // change IP address below
   axios({
     method: "GET",
     url: `http://localhost:4001/api/hotel/${req.params.hotelId}`
@@ -54,6 +55,7 @@ app.get('/api/hotel/:hotelId', (req, res) => {
 })
 
 app.get('/api/pictures/:hotelId', (req, res) => {
+  // change IP address below
   var hotelId = req.params.hotelId
   axios({
     method: "GET",
