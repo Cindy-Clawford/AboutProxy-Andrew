@@ -1,5 +1,5 @@
 config:
-  target: http://localhost:4004
+  target: http://http://54.183.84.186:4004
   phases:
     - duration: 60
       arrivalRate: 10
