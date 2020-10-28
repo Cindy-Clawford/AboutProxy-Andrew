@@ -8,6 +8,9 @@ const app = express();
 const port = 4004;
 
 app.use(express.static(path.join(__dirname, '../dist')));
+
+app.use('/loaderio-f27da2ca8543e01c3e710f2b68eb6a9a.txt', express.static(path.join(__dirname, '..//loaderio-f27da2ca8543e01c3e710f2b68eb6a9a.txt')));
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }))
 
