@@ -2,11 +2,14 @@ const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
 const axios = require('axios')
+const h5bp = require('h5bp');
 require('newrelic');
 
 const app = express();
+app.use(h5bp({ root: __dirname + '/public' }));
 const port = 4004;
 
+app.use(express.compress());
 app.use(express.static(path.join(__dirname, '../dist')));
 
 app.use('/loaderio-f27da2ca8543e01c3e710f2b68eb6a9a.txt', express.static(path.join(__dirname, '..//loaderio-f27da2ca8543e01c3e710f2b68eb6a9a.txt')));

@@ -1,18 +1,18 @@
 config:
   target: http://54.183.84.186:4004
   phases:
-    - duration: 60
+    - duration: 20
       arrivalRate: 10
-      name: "10 arrivals a sec for 1 min"
-    - duration: 60
+      name: "10 arrivals a sec for 20 sec"
+    - duration: 20
       arrivalRate: 100
-      name: "100 arrivals a sec for 1 min"
-    - duration: 60
+      name: "100 arrivals a sec for 20 sec"
+    - duration: 20
       arrivalRate: 1000
-      name: "1000 arrivals a sec for 1 min"
-    - duration: 60
+      name: "1000 arrivals a sec for 20 sec"
+    - duration: 20
       arrivalRate: 100
-      name: "100 arrivals a sec for 1 min"
+      name: "100 arrivals a sec for 20 sec"
 scenarios:
   - flow:
     - loop:
@@ -21,6 +21,6 @@ scenarios:
         - get:
             url: "/{{ $loopElement }}"
       over:
-        - hotel9890
-        - hotel98900
-        - hotel9890000
+        - hotel99890
+        - hotel998900
+        - hotel9989000
