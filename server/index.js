@@ -6,7 +6,7 @@ const h5bp = require('h5bp');
 require('newrelic');
 
 const app = express();
-app.use(h5bp({ root: __dirname + '/public' }));
+app.use(h5bp({ root: __dirname + '../dist' }));
 const port = 4004;
 
 app.use(express.compress());
